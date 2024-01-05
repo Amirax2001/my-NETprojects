@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reverse Array Display</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin: 20px auto;
+    }
+
+    td {
+      padding: 10px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <h1>The Array in reverse order:</h1>
+
+  <script>
+    var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    var reversedArr = arr.reverse();
+
+    var table = document.createElement("table");
+    var row = document.createElement("tr");
+
+    reversedArr.forEach(function(element) {
+      var cell = document.createElement("td");
+      cell.textContent = element;
+      row.appendChild(cell);
+    });
+
+    table.appendChild(row);
+    document.body.appendChild(table);
+  </script>
+</body>
+</html>

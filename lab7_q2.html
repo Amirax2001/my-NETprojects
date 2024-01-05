@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Styles</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    #dynamic-paragraph {
+      font-size: 16pt;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dynamic Styles</h1>
+
+  <p id="dynamic-paragraph">Here is a dynamic-styled paragraph</p>
+
+  <script>
+    var userInputSize = prompt("Please enter font size in pt:");
+    var userInputColor = prompt("Please enter text color: ");
+
+    var paragraph = document.getElementById("dynamic-paragraph");
+    paragraph.style.fontSize = userInputSize;
+    paragraph.style.color = userInputColor;
+  </script>
+</body>
+</html>

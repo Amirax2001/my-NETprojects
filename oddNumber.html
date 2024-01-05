@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab6:Q1</title>
+  <style>
+    .blue-bold {
+      color: blue;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  
+  <script>
+    var container = document.createElement("div");
+
+    for (var i = 1; i <= 20; i++) {
+      if (i % 2 !== 0 && i !== 9) {
+        var spanElement = document.createElement("span");
+        spanElement.className = "blue-bold";
+        spanElement.appendChild(document.createTextNode(i));
+        spanElement.appendChild(document.createElement("br"));
+        container.appendChild(spanElement);
+      }
+    }
+
+    document.body.appendChild(container);
+  </script>
+</body>
+</html>

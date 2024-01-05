@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>midterm1-amira</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+    
+      color: black;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header id="resultHeader">Enter your year of birth</header>
+
+  <script>
+    function calculateAge() {
+      var yearOfBirth = prompt("please enter the year of birth:");
+      var currentYear = new Date().getFullYear();
+      var age = currentYear - yearOfBirth;
+
+      
+
+      var header = document.getElementById("resultHeader");
+      header.textContent = "Your age is: " + age + "years.";
+    }
+
+    calculateAge(); 
+  </script>
+</body>
+</html>

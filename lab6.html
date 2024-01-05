@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vaccination Status</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  
+
+  <script>
+    var vaccinatedCount = 0;
+    var nonVaccinatedCount = 0;
+    var userInput;
+
+    do {
+      userInput = parseInt(prompt("Enter 1 for 'vaccinated', 2 for 'non-vaccinated', or -2 to stop entering:"));
+
+      if (userInput === 1) {
+        vaccinatedCount++;
+      } else if (userInput === 2) {
+        nonVaccinatedCount++;
+      }
+    } while (userInput !== -2);
+
+    var resultText = "The number of vaccinated students is: " + vaccinatedCount + "<br>" +
+                     "The number of non-vaccinated students: " + nonVaccinatedCount;
+
+    document.write(resultText);
+  </script>
+</body>
+</html>

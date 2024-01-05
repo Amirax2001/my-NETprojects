@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- nnn -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Lab 4: CSS Example</title>
+<style type="text/css">
+    body              {background-color:  #f4f7ee; font-family: American Typewriter;}
+    
+    header, footer     {text-align:center;
+                        background-color: #858c73;
+                        color: white;
+                        width:50%; 
+                        position: relative;
+                        left: 25%;}
+
+    nav li              {list-style: none; 
+                        display: inline; 
+                        padding-left: 20px;}
+
+    a                   {color: white; text-decoration: none;}
+
+    a:hover            {background-color:#dde7cb;}
+
+    img                {width:100%;}
+    .text             {position: absolute;
+                       top: 70px;
+                       left: 170px;
+                       z-index: 1;
+                       font-size: 40pt ;
+                       color: white; 
+                       padding-left: 10px; padding-right: 10px;
+                       border-style: solid;
+                       border-color: white;}
+
+    section            {color:#858c73;
+                        border-width: 1px;
+                        border-color:#858c73; 
+                        border-style: solid; 
+                        width:50%; 
+                        position: relative;
+                        left: 25%;}
+
+    .floated            {color: white;
+                        background-color:#858c73;
+                         padding: 5px; float: left;
+                         text-align: left; 
+                         width: 50%; margin: 0px; }
+
+   
+
+    </style>
+</head>
+<body>
+  <header id="header_id"> 
+    <nav >
+        <ul>
+            <li> <a href="#header_id">Home</a></li>
+            <li> <a href="#about_id">About Me</a></li>
+            <li> <a href="#hobbies_id">My Hobbies</a></li>
+        </ul>
+    </nav>
+    <img src="photographer.jpeg">
+    <p class="text"> Janet Simon</p>
+</header>
+    <section>
+ <h2 class="floated" id="about_id">About Me</h2>
+ <p>Hi My name is Janet. I am 25 years old born and rased in London. I got my degree on computer science in 2007 from <em>King's College London</em>. Currently I work as web-developer at a big company.</p>
+ </section>
+ 
+ <section>
+ <h2 class="floated" id="hobbies_id">My Hobbies</h2>
+ <p>Since I was little I was facinated about all forms of art: painting, crafting, taking pohtos. Along with that I love discovering new cities and places around the world. I often save up for months to plan a trip every year. I love friends’ trips and family outings but solo travelling brings me the real adventure and thrill to venture into new places all by myself. </p>
+ </section>
+ 
+
+ <footer >
+ <p>Please feel free to contact me on my following email:</p>
+ <a href="mailto:galhadba@ksu.edu.sa"><img src="mail2.png" style="width:30px; height: 30px;"></a>
+ 
+ </footer>
+ 
+ 
+ 
+
+
+</body></html>
