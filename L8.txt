@@ -1,0 +1,25 @@
+2. Configure the two RMON events.
+config t
+rmon event 1 log description HighInput owner NET311
+rmon event 2 log description LowInput owner NET311
+
+Before configuring the RMON alarm, we need to find out the ifIndex that corresponds to the interface e1/0.
+3. Find the interface index of e1/0 (Ethernet1/0)
+end
+show snmp mib ifmib ifindex
+
+4. Configure the RMON alarm.
+config t
+rmon alarm 1 ifInOctets.2 10 delta rising-threshold 2000 1 falling-threshold
+1000 2 owner NET311
+
+5. Verify the RMON alarm and events you have created:
+end
+show rmon alarms
+
+Lab sheet 3.1: provide a screenshot showing the RMON alarms.
+show rmon events
+
+Send 1000 ICMP packets to PC3 with 10 ms delay between them.
+ping 172.16.0.103 -c 1000 -i 10
+
