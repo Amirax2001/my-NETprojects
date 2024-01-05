@@ -1,0 +1,21 @@
+4. Configure the SNMPv3 engine ID.
+config t
+snmp-server engineID local 123456789A
+
+5. Configure SNMPv3 views and groups.
+snmp-server engineID local 123456789A
+snmp-server view VIEW_SYSTEM system included
+snmp-server view VIEW_ALL iso included
+snmp-server group GROUP1 v3 priv write VIEW_SYSTEM
+snmp-server group GROUP2 v3 priv read VIEW_ALL
+
+6. Configure SNMPv3 users.
+snmp-server user USER1 GROUP1 v3 auth sha Auth1 priv des56 Enc1
+snmp-server user USER2 GROUP2 v3 auth sha Auth2 priv des56 Enc2
+end
+
+7. Verify the groups you have created by typing the following command:
+show snmp group
+
+8. Verify the users you have created by typing the following command:
+show snmp user

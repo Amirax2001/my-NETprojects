@@ -1,0 +1,22 @@
+Type the following commands to configure the SNMP agent on R1 router. Use your name as a contact:
+config t
+snmp-server community public ro SNMP_ACL
+snmp-server location Lab4
+snmp-server contact Mostafa Dahshan
+snmp-server host 172.16.0.2 version 2c public
+snmp-server enable traps
+ip access-list standard SNMP_ACL
+ permit 172.16.0.2
+ exit
+
+8. Type the following commands to configure the network interface e0/0.
+int e0/0
+ ip address 172.16.0.1 255.255.255.0
+no shutdown
+
+12. Go to R1 console in GNS3 and run the following commands:
+int e1/0
+ no shutdown
+14. Go to R1 console in GNS3 and run the following commands:
+int e1/0
+ shutdown

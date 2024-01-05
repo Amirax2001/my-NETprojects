@@ -1,0 +1,41 @@
+create file
+
+sudo nano /etc/snmp/snmpd.conf
+
+crt-x to exit type y to save press enter to eccept file
+
+to verify the contents of the file
+
+sudo cat /etc/snmp/snmpd.conf
+
+restart the snmpd 
+
+sudo service snmpd restart
+
+to verify that snmp agent is working v1
+
+snmpstatus -c public -v1 localhost
+
+test snmp v2
+snmpstatus -c public -v2c localhost
+
+use snmpget to retrieve the system.sysContact
+snmpget -c public -v1 localhost .1.3.6.1.2.1.1.4.0
+
+use snmptext to retrieve the same information with less oid
+snmpgetnext -c public -v1 localhost .1.3.6.1.2.1.1.4
+
+use the snmptranslate command to find the mib name
+snmptranslate .1.3.6.1.2.1.1.3.0
+
+to find the full mib name 
+snmptranslate -Of .1.3.6.1.2.1.1.3.0
+
+to list all the result which lie within the subtree
+snmpwalk -c public -v1 localhost ipAddrTable 
+
+to get the tree of the ipAddtrTable
+snmptranslate -Tp -IR ipAddrTable
+
+to get a tabular represenation of the ipAddrTable
+snmptable -v 2c -c public localhost ipAddrTable
